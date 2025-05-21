@@ -23,89 +23,58 @@ import ServiceCard from "../components/service-card"
 import TestimonialCard from "../components/testimonial-card"
 import CountUp from "../components/count-up"
 import { Link } from "react-router-dom"
+import Navbar from "../components/Navbar"
 
 export default function Home() {
+  
+  
+
   return (
     <div className="flex min-h-screen flex-col p-3">
-      <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md">
-        <div className="container flex h-16 items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-2">
-            <img
-              src={Logo}
-              alt="BB Enterprise Logo"
-              className="h-56 w-60 m-1"
-              priority
-            />
-          </Link>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link
-              href="#services"
-              className="text-sm font-medium text-gray-700 hover:text-violet-700 transition-colors"
-            >
-              Services
-            </Link>
-            <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-violet-700 transition-colors">
-              About
-            </Link>
-            <Link href="#work" className="text-sm font-medium text-gray-700 hover:text-violet-700 transition-colors">
-              Work
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-sm font-medium text-gray-700 hover:text-violet-700 transition-colors"
-            >
-              Testimonials
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-violet-700 transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <div className="flex items-center gap-4">
-            <Button variant="outline" size="icon" className="md:hidden">
-              <span className="sr-only">Toggle menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </header>
-
+     
+      <Navbar/>
       {/* main */}
       <main className="flex-1">
         <section className="relative overflow-hidden bg-white py-20 md:py-32">
           <div className="container relative z-10">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="space-y-8 max-w-xl">
-                <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-sm font-medium text-violet-700">
+                <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-sm font-medium text-violet-900">
                   <span>Full-Service Digital Marketing Agency</span>
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-                  Elevate Your <span className="text-violet-700">Digital Presence</span> With Us
+                  Elevate Your <span className="text-violet-950">Digital Presence</span> With Us
                 </h1>
                 <p className="text-lg text-gray-600">
-                  We help businesses grow through strategic digital marketing, stunning web design, and data-driven
-                  campaigns that deliver measurable results.
+                  As a leading Digital Marketing agency, We operate from UAE and India, delivering top-tier marketing and advertising solutions to clients globally.
+                  With extensive experience across diverse sectors, We partnered with a range of businesses from small and medium enterprises to large corporations,
+                  as well as collaborating with agencies and fellow freelancers. Our focus is on leveraging proven strategies to drive impactful results and elevate 
+                  your brand in today's competitive digital landscape.
                 </p>
+                <div className="flex flex-wrap gap-4 pt-2">
+                  Seo, ppc, sem, smm, google analytics, design and branding
+  {[
+    { label: 'SEO', icon: '🔍' },
+    { label: 'PPC', icon: '🖱️' },
+    { label: 'SMM', icon: '📱' },
+    { label: 'design and branding', icon:'🏷️'},
+    { label: 'Google Analytics', icon: '📊' }
+  ].map((item) => (
+    <div
+      key={item.label}
+      className="flex items-center gap-2 rounded-full border  px-4 py-2 text-sm font-medium bg-white/10 backdrop-blur-sm"
+    >
+      <span>{item.icon}</span>
+      <span>{item.label}</span>
+    </div>
+  ))}
+</div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-violet-700 hover:bg-violet-800 text-white">
+                  <Button size="lg" className="bg-violet-900 hover:bg-violet-950 text-white">
                     Get Started
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                    <ChevronRight className="ml-2 h-4 w-4 inline mb-1" />
                   </Button>
-                  <Button size="lg" variant="outline" className="border-violet-200 text-violet-700 hover:bg-violet-50">
+                  <Button size="lg" variant="outline" className="bg-violet-900 border-violet-200 text-violet-900 hover:bg-violet-950">
                     Our Services
                   </Button>
                 </div>
@@ -149,37 +118,37 @@ export default function Home() {
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <ServiceCard
-                icon={<Globe className="h-10 w-10 text-violet-700" />}
+                icon={<Globe className="h-10 w-10 text-violet-950" />}
                 title="Web Design & Development"
                 description="Custom, responsive websites that convert visitors into customers."
                 features={["Responsive Design", "UX/UI Optimization", "E-commerce Solutions"]}
               />
               <ServiceCard
-                icon={<Search className="h-10 w-10 text-violet-700" />}
+                icon={<Search className="h-10 w-10 text-violet-950" />}
                 title="Search Engine Optimization"
                 description="Improve your visibility and drive organic traffic to your website."
                 features={["Keyword Research", "On-page SEO", "Link Building"]}
               />
               <ServiceCard
-                icon={<MousePointer className="h-10 w-10 text-violet-700" />}
+                icon={<MousePointer className="h-10 w-10 text-violet-950" />}
                 title="PPC & SEM"
                 description="Targeted paid campaigns that deliver immediate results."
                 features={["Google Ads", "Bing Ads", "Retargeting"]}
               />
               <ServiceCard
-                icon={<Instagram className="h-10 w-10 text-violet-700" />}
+                icon={<Instagram className="h-10 w-10 text-violet-950" />}
                 title="Social Media Marketing"
                 description="Engage your audience and build brand loyalty across platforms."
                 features={["Content Strategy", "Community Management", "Paid Social"]}
               />
               <ServiceCard
-                icon={<BarChart className="h-10 w-10 text-violet-700" />}
+                icon={<BarChart className="h-10 w-10 text-violet-950" />}
                 title="Analytics & Reporting"
                 description="Data-driven insights to optimize your marketing strategy."
                 features={["Google Analytics", "Conversion Tracking", "Custom Dashboards"]}
               />
               <ServiceCard
-                icon={<PenTool className="h-10 w-10 text-violet-700" />}
+                icon={<PenTool className="h-10 w-10 text-violet-950" />}
                 title="Branding & Design"
                 description="Create a memorable brand identity that resonates with your audience."
                 features={["Logo Design", "Brand Guidelines", "Marketing Materials"]}
@@ -190,37 +159,9 @@ export default function Home() {
 
         <section id="about" className="py-20 bg-white">
           <div className="container">
-            <div className="grid gap-12 lg:grid-cols-2 items-center">
-              <div className="relative">
-                <div className="aspect-square w-full max-w-md mx-auto rounded-2xl bg-gradient-to-br from-violet-600 to-violet-900 p-1">
-                  <div className="h-full w-full rounded-xl bg-white p-4">
-                    <div className="grid h-full w-full grid-cols-2 grid-rows-2 gap-4">
-                      {[
-                        "bg-violet-100 from-violet-400/20 to-violet-400/5",
-                        "bg-violet-50 from-violet-400/10 to-violet-400/5",
-                        "bg-violet-50 from-violet-400/10 to-violet-400/5",
-                        "bg-violet-100 from-violet-400/20 to-violet-400/5",
-                      ].map((bg, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center justify-center rounded-lg bg-gradient-to-br p-6"
-                        >
-                          <img
-                            src={`/placeholder.svg?height=100&width=100&text=Service+${i + 1}`}
-                            alt={`Marketing service ${i + 1}`}
-                            width={100}
-                            height={100}
-                            className="h-full w-full object-cover rounded"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute -bottom-6 -right-6 h-64 w-64 rounded-full bg-violet-100 blur-3xl -z-10" />
-              </div>
+            <div className="">
               <div className="space-y-8">
-                <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-sm font-medium text-violet-700">
+                <div className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5 text-sm font-medium text-violet-900">
                   <span>Why Choose BB Enterprise</span>
                 </div>
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -258,10 +199,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Button className="bg-violet-700 hover:bg-violet-800 text-white">
-                  Learn More About Us
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                
               </div>
             </div>
           </div>
@@ -289,45 +227,70 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="work" className="py-20 bg-white">
-          <div className="container">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Recent Work</h2>
-              <p className="mt-4 text-lg text-gray-600">
-                Take a look at some of our successful projects and the results we've delivered.
-              </p>
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div
-                  key={i}
-                  className="group relative overflow-hidden rounded-xl bg-gray-100 transition-all hover:shadow-lg"
-                >
-                  <div className="aspect-video w-full overflow-hidden">
-                    <img
-                      src={`/placeholder.svg?height=300&width=500&text=Project+${i}`}
-                      alt={`Project ${i}`}
-                      width={500}
-                      height={300}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <h3 className="text-xl font-bold">Project Title {i}</h3>
-                    <p className="text-sm text-gray-200">Web Design, SEO</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-12 text-center">
-              <Button variant="outline" className="border-violet-200 text-violet-700 hover:bg-violet-50">
-                View All Projects
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+       <section id="work" className="py-20 bg-white overflow-hidden">
+  <div className="container">
+    <div className="mx-auto max-w-2xl text-center mb-16">
+      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Recent Work</h2>
+      <p className="mt-4 text-lg text-gray-600">
+        Take a look at some of our successful projects and the results we've delivered.
+      </p>
+    </div>
+
+    {/* Horizontal scrollable project list */}
+    <div className="flex gap-6 overflow-x-auto pb-4 px-2 hide-scrollbar">
+      {[
+        {
+          img: "/images/work1.jpg",
+          title: "Brand Identity",
+          desc: "Design, Branding",
+        },
+        {
+          img: "/images/work2.jpg",
+          title: "Marketing Campaign",
+          desc: "SMM, Strategy",
+        },
+        {
+          img: "/images/work3.jpg",
+          title: "E-commerce Site",
+          desc: "Web Design, SEO",
+        },
+        {
+          img: "/images/work4.jpg",
+          title: "Logo & Identity",
+          desc: "Design, Branding",
+        },
+        {
+          img: "/images/work5.jpg",
+          title: "Social Growth",
+          desc: "SMM, Analytics",
+        },
+        {
+          img: "/images/work6.jpg",
+          title: "Landing Page",
+          desc: "UI/UX, Conversion",
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="group relative min-w-[300px] max-w-sm flex-shrink-0 overflow-hidden rounded-xl bg-gray-100 transition-all hover:shadow-lg"
+        >
+          <div className="aspect-video w-full overflow-hidden">
+            <img
+              src={item.img}
+              alt={item.title}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
           </div>
-        </section>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 text-white translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            <h3 className="text-xl font-bold">{item.title}</h3>
+            <p className="text-sm text-gray-200">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
         <section id="testimonials" className="py-20 bg-gray-50">
           <div className="container">
@@ -340,44 +303,30 @@ export default function Home() {
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <TestimonialCard
                 quote="BB Enterprise transformed our online presence. Our website traffic has increased by 200% and our leads have doubled since working with them."
-                name="Sarah Johnson"
-                title="Marketing Director, TechCorp"
+                name="Mansoor"
+                title=" CEO, wisdom management."
                 rating={5}
+                image="https://ui-avatars.com/api/?name=Mansoor&background=7c3aed&color=#7621a3&rounded=true"
               />
               <TestimonialCard
-                quote="Their SEO expertise is unmatched. We're now ranking on the first page for all our target keywords, and our business has grown significantly as a result."
-                name="Michael Chen"
-                title="CEO, GrowthBiz"
+                quote="Their social media management transformed our online presence. Engagement has skyrocketed, and we've built a loyal community that's actively driving traffic and sales to our business."
+                name="Abdul Azeez "
+                title="Owner, Socialize academy"
                 rating={5}
+                image="https://ui-avatars.com/api/?name=Azeez&background=7c3aed&color=#7621a3&rounded=true"
               />
               <TestimonialCard
                 quote="The team at BB Enterprise is professional, responsive, and truly cares about our success. They're not just a vendor, they're a partner in our growth."
-                name="Emily Rodriguez"
-                title="Owner, Boutique Retail"
-                rating={5}
+                name="Niyas karakkal"
+                title="marketing manager, Tharbiya international"
+                rating={4}
+                image="https://ui-avatars.com/api/?name=Niyaz&background=7c3aed&color=#7621a3&rounded=true"
               />
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-violet-900 text-white">
-          <div className="container">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Ready to Grow Your Business?</h2>
-              <p className="mt-4 text-lg text-violet-200">
-                Let's discuss how we can help you achieve your marketing goals and take your business to the next level.
-              </p>
-              <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <Button size="lg" className="bg-white text-violet-900 hover:bg-gray-100">
-                  Schedule a Consultation
-                </Button>
-                <Button size="lg" variant="outline" className="border-violet-200 text-white hover:bg-violet-800">
-                  View Our Services
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         <section id="contact" className="py-20 bg-white">
           <div className="container">
@@ -414,19 +363,19 @@ export default function Home() {
                 <div className="mt-8">
                   <h3 className="font-medium text-gray-900">Follow Us</h3>
                   <div className="mt-4 flex gap-4">
-                    <Link href="#" className="text-gray-500 hover:text-violet-700 transition-colors">
+                    <Link href="#" className="text-gray-500 hover:text-violet-950 transition-colors">
                       <Facebook className="h-6 w-6" />
                       <span className="sr-only">Facebook</span>
                     </Link>
-                    <Link href="#" className="text-gray-500 hover:text-violet-700 transition-colors">
+                    <Link href="#" className="text-gray-500 hover:text-violet-950 transition-colors">
                       <Twitter className="h-6 w-6" />
                       <span className="sr-only">Twitter</span>
                     </Link>
-                    <Link href="#" className="text-gray-500 hover:text-violet-700 transition-colors">
+                    <Link href="#" className="text-gray-500 hover:text-violet-950 transition-colors">
                       <Instagram className="h-6 w-6" />
                       <span className="sr-only">Instagram</span>
                     </Link>
-                    <Link href="#" className="text-gray-500 hover:text-violet-700 transition-colors">
+                    <Link href="#" className="text-gray-500 hover:text-violet-950 transition-colors">
                       <Linkedin className="h-6 w-6" />
                       <span className="sr-only">LinkedIn</span>
                     </Link>
@@ -503,7 +452,7 @@ export default function Home() {
                       placeholder="Tell us about your project"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-violet-700 hover:bg-violet-800 text-white">
+                  <Button type="submit" className="w-full bg-violet-950 hover:bg-violet-950 text-white">
                     Send Message
                   </Button>
                 </form>

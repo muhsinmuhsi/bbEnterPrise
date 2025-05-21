@@ -13,7 +13,7 @@ export default function ServiceCard({ icon, title, description, features }) {
       <ul className="space-y-2">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center gap-2 text-sm text-gray-600">
-            <CheckCircle className="h-4 w-4 text-violet-600" />
+            <CheckCircle className="h-4 w-4 text-violet-800" />
             <span>{feature}</span>
           </li>
         ))}
