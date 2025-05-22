@@ -1,4 +1,3 @@
-import Image from "../assets/ElectronicsImage.jpg";
 import Logo from "../assets/logo 1.png";
 import Button from "../components/Ui/button";
 import {
