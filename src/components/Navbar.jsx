@@ -25,19 +25,19 @@ const Navbar = () => {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
-          <HashLink smooth to="/#services" className="text-sm font-medium text-gray-700 hover:text-violet-950 transition-colors">
+          <HashLink smooth to="/#services" className="text-md font-medium text-gray-700 hover:text-violet-950 transition-colors">
             Services
           </HashLink>
-          <HashLink smooth to="/#about" className="text-sm font-medium text-gray-700 hover:text-violet-950 transition-colors">
+          <HashLink smooth to="/#about" className="text-md font-medium text-gray-700 hover:text-violet-950 transition-colors">
             About
           </HashLink>
-          <HashLink smooth to="/#work" className="text-sm font-medium text-gray-700 hover:text-violet-950 transition-colors">
+          <HashLink smooth to="/#work" className="text-md font-medium text-gray-700 hover:text-violet-950 transition-colors">
             Work
           </HashLink>
-          <HashLink smooth to="/#testimonials" className="text-sm font-medium text-gray-700 hover:text-violet-950 transition-colors">
+          <HashLink smooth to="/#testimonials" className="text-md font-medium text-gray-700 hover:text-violet-950 transition-colors">
             Testimonials
           </HashLink>
-          <HashLink smooth to="/#contact" className="text-sm font-medium text-gray-700 hover:text-violet-950 transition-colors">
+          <HashLink smooth to="/#contact" className="text-md font-medium text-gray-700 hover:text-violet-950 transition-colors">
             Contact
           </HashLink>
         </nav>

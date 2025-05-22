@@ -1,10 +1,15 @@
 import { useEffect, useRef } from "react"
-import ElectronicsImage from "../assets/ElectronicsImage.jpg"
+import BannerImage from "../assets/social-media-concept-composition.jpg"
+import InstaImage from '../assets/InstaImage-removebg-preview.png'
+import facebokImage from '../assets/FacebookImage-removebg-preview.png'
+import whatsappImage from '../assets/whatsappIamge.png'
+
 
 export default function HeroAnimation() {
   const containerRef = useRef(null)
 
   useEffect(() => {
+
     const container = containerRef.current
     if (!container) return
 
@@ -30,6 +35,8 @@ export default function HeroAnimation() {
     return () => {
       document.head.removeChild(style)
     }
+
+    
   }, [])
 
   return (
@@ -37,7 +44,7 @@ export default function HeroAnimation() {
       {/* Main image */}
       <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-500 hover:shadow-violet-300/50">
         <img
-          src={ElectronicsImage}
+          src={BannerImage}
           alt="Digital Marketing"
           width={500}
           height={500}
@@ -51,27 +58,27 @@ export default function HeroAnimation() {
       <div className="floating-element absolute -bottom-10 left-1/3 z-0 h-20 w-20 rounded-full bg-violet-100 opacity-80" />
 
       {/* Floating icons (just placeholders here) */}
-      <div className="floating-element absolute top-10 right-10 z-20 rounded-lg bg-white p-3 shadow-lg">
+      <div className="floating-element absolute top-10 right-10 z-20 rounded-lg bg-white/0 p-3 shadow-lg">
         <img
-          src="/placeholder.svg?height=40&width=40&text=SEO"
+          src={InstaImage}
           alt="SEO Icon"
           width={40}
           height={40}
           className="h-10 w-10"
         />
       </div>
-      <div className="floating-element absolute bottom-16 -left-4 z-20 rounded-lg bg-white p-3 shadow-lg">
+      <div className="floating-element absolute bottom-16 -left-4 z-20 rounded-lg bg-white/0 p-3 shadow-lg">
         <img
-          src="/placeholder.svg?height=40&width=40&text=Web"
+          src={whatsappImage}
           alt="Web Icon"
           width={40}
           height={40}
           className="h-10 w-10"
         />
       </div>
-      <div className="floating-element absolute -bottom-4 right-20 z-20 rounded-lg bg-white p-3 shadow-lg">
+      <div className="floating-element absolute -bottom-4 right-20 z-20 rounded-lg bg-white/0 p-3 shadow-lg">
         <img
-          src="/placeholder.svg?height=40&width=40&text=SMM"
+          src={facebokImage}
           alt="Social Media Icon"
           width={40}
           height={40}

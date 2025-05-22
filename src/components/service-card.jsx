@@ -4,7 +4,7 @@ import { CheckCircle } from "lucide-react"
 
 export default function ServiceCard({ icon, title, description, features }) {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-violet-100 hover:-translate-y-1">
+    <div  data-aos="fade-up" className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-violet-100 hover:-translate-y-1">
       <div className="mb-4 inline-flex items-center justify-center rounded-lg bg-violet-50 p-3 text-violet-600">
         {icon}
       </div>
